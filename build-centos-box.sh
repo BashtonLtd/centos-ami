@@ -93,12 +93,12 @@ for file in \
   http://dl.fedoraproject.org/pub/epel/6/x86_64/python-boto-2.13.3-1.el6.noarch.rpm \
   http://dl.fedoraproject.org/pub/epel/6/x86_64/libyaml-0.1.3-1.el6.x86_64.rpm \
   http://dl.fedoraproject.org/pub/epel/6/x86_64/PyYAML-3.10-3.el6.x86_64.rpm \
-  http://www.bashton.com/downloads/centos-ami/RPMS/noarch/cloud-init-0.5.15-75.el6_bashton1.noarch.rpm ; do
+  http://www.bashton.com/downloads/centos-ami/RPMS/noarch/cloud-init-0.5.15-75.el6_bashton2.noarch.rpm ; do
   wget $file
   yum --installroot=$ROOTFS --nogpgcheck -y localinstall $(basename $file)
   rm $(basename $file)
 done
-sed -i -e 's/^\(PasswordAuthentication\) yes/\1 no/' /etc/ssh/sshd_config
+sed -i -e 's/^\(PasswordAuthentication\) yes/\1 no/' ${ROOTFS}/etc/ssh/sshd_config
 
 # fingerprint daemon causes errors - makes no sense to have it on 'cloud'
 yum --installroot=$ROOTFS --nogpgcheck -y remove fprintd libfprint fprintd-pam
