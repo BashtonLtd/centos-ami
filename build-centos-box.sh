@@ -90,7 +90,7 @@ yum --installroot=$ROOTFS --nogpgcheck -y install nc acpid python-cheetah python
 for file in \
   http://www.bashton.com/downloads/centos-ami/RPMS/noarch/ec2-utils-0.4-1.19.el6_bashton1.noarch.rpm \
   http://www.bashton.com/downloads/centos-ami/RPMS/noarch/ec2-net-utils-0.4-1.19.el6_bashton1.noarch.rpm \
-  http://dl.fedoraproject.org/pub/epel/6/x86_64/python-boto-2.13.3-1.el6.noarch.rpm \
+  http://dl.fedoraproject.org/pub/epel/6/x86_64/python-boto-2.25.0-2.el6.noarch.rpm \
   http://dl.fedoraproject.org/pub/epel/6/x86_64/libyaml-0.1.3-1.el6.x86_64.rpm \
   http://dl.fedoraproject.org/pub/epel/6/x86_64/PyYAML-3.10-3.el6.x86_64.rpm \
   http://www.bashton.com/downloads/centos-ami/RPMS/noarch/cloud-init-0.5.15-75.el6_bashton2.noarch.rpm ; do
